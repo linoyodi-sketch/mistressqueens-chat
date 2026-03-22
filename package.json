@@ -1,21 +1,14 @@
 {
-  "name": "mistressqueens-chat-server",
+  "name": "mistressqueens-chat",
   "version": "1.0.0",
-  "description": "שרת צ'אט בזמן אמת - מרתף השליטה",
+  "description": "Chat server for Mistress Queens",
   "main": "server.js",
-  "scripts": {
-    "start": "node server.js",
-    "dev": "nodemon server.js"
-  },
   "dependencies": {
-    "cors": "^2.8.5",
-    "express": "^4.18.2",
-    "socket.io": "^4.6.1"
+    "ably": "^1.2.0",
+    "express": "^4.17.1",
+    "cors": "^2.8.5"
   },
-  "devDependencies": {
-    "nodemon": "^3.0.1"
-  },
-  "engines": {
-    "node": ">=18.0.0"
+  "scripts": {
+    "start": "node server.js"
   }
 }
