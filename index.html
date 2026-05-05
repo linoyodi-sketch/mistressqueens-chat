@@ -718,6 +718,46 @@
     background: #080503;
   }
 
+  /* ===== IMAGE PLACEHOLDERS ===== */
+  .img-1 { background: linear-gradient(135deg, #4a1f3a 0%, #1a0814 50%, #0a0408 100%); }
+  .img-2 { background: linear-gradient(135deg, #5a2a18 0%, #2a1208 50%, #100604 100%); }
+  .img-3 { background: linear-gradient(135deg, #2a1840 0%, #14082a 50%, #060410 100%); }
+  .img-4 { background: linear-gradient(135deg, #5a3a18 0%, #2a1808 50%, #100804 100%); }
+  .img-5 { background: linear-gradient(135deg, #3a1828 0%, #1a0810 50%, #080406 100%); }
+  .img-6 { background: linear-gradient(135deg, #1a2a3a 0%, #08141a 50%, #04080a 100%); }
+  .img-7 { background: linear-gradient(135deg, #4a2a2a 0%, #1a0a0a 50%, #080404 100%); }
+
+  .figure {
+    position: relative;
+    overflow: hidden;
+  }
+  .figure::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(120px 180px at 50% 35%, rgba(255,200,150,0.18), transparent 70%),
+      radial-gradient(60px 90px at 50% 70%, rgba(212,162,76,0.15), transparent 70%);
+  }
+  .figure::after {
+    content: '♛';
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    color: rgba(212,162,76,0.18);
+    font-size: 80px;
+    z-index: 1;
+  }
+  .post-img.figure::after { font-size: 110px; }
+  .mini-post-img.figure::after { font-size: 30px; }
+
+  .ava-grad-1 { background: linear-gradient(135deg, #c2185b, #5a0030) !important; }
+  .ava-grad-2 { background: linear-gradient(135deg, #8e24aa, #311b92) !important; }
+  .ava-grad-3 { background: linear-gradient(135deg, #d4a24c, #6a3a10) !important; }
+  .ava-grad-4 { background: linear-gradient(135deg, #ad1457, #4a148c) !important; }
+  .ava-grad-5 { background: linear-gradient(135deg, #e65100, #4a148c) !important; }
+
   @media (max-width: 980px) {
     .layout { grid-template-columns: 1fr; }
     .sidebar, .right-side { display: none; }
@@ -745,7 +785,7 @@
         <button class="icon-btn">🔔<span class="dot"></span></button>
         <button class="icon-btn">💬<span class="dot"></span></button>
         <button class="icon-btn">♛</button>
-        <div class="avatar-btn" style="background-image:url('https://i.pravatar.cc/100?img=47')"></div>
+        <div class="avatar-btn ava-grad-1"></div>
       </div>
     </div>
 
@@ -795,7 +835,7 @@
 
         <div class="gallery">
           <div class="goddess-card">
-            <div class="goddess-img" style="background-image:url('https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?w=500&q=80')">
+            <div class="goddess-img figure img-1">
               <span class="live-badge">● LIVE</span>
               <span class="crown-badge">♛</span>
               <div class="goddess-info">
@@ -806,7 +846,7 @@
           </div>
 
           <div class="goddess-card">
-            <div class="goddess-img" style="background-image:url('https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=500&q=80')">
+            <div class="goddess-img figure img-2">
               <span class="crown-badge">♛</span>
               <div class="goddess-info">
                 <div class="goddess-name">Goddess A.</div>
@@ -816,7 +856,7 @@
           </div>
 
           <div class="goddess-card">
-            <div class="goddess-img" style="background-image:url('https://images.unsplash.com/photo-1517841905240-472988babdf9?w=500&q=80')">
+            <div class="goddess-img figure img-3">
               <span class="live-badge">● LIVE</span>
               <span class="crown-badge">♛</span>
               <div class="goddess-info">
@@ -827,7 +867,7 @@
           </div>
 
           <div class="goddess-card">
-            <div class="goddess-img" style="background-image:url('https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=500&q=80')">
+            <div class="goddess-img figure img-4">
               <span class="crown-badge">♛</span>
               <div class="goddess-info">
                 <div class="goddess-name">Lady B.</div>
@@ -852,7 +892,7 @@
         <!-- POST 1 -->
         <article class="post">
           <div class="post-head">
-            <div class="post-avatar" style="background-image:url('https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?w=200&q=80')"></div>
+            <div class="post-avatar ava-grad-1"></div>
             <div class="post-info">
               <div class="post-name">Queen Mei.</div>
               <div class="post-time">2 hours ago</div>
@@ -860,7 +900,7 @@
             <div class="post-pin">📌 Pinned</div>
           </div>
           <div class="post-text">A tribute well sent is a pleasure well earned. Remember who holds the power. ♛</div>
-          <div class="post-img" style="background-image:url('https://images.unsplash.com/photo-1551803091-e20673f15770?w=800&q=80')">
+          <div class="post-img figure img-5">
             <div class="lock">🔒</div>
           </div>
           <div class="post-actions">
@@ -874,14 +914,14 @@
         <!-- POST 2 -->
         <article class="post">
           <div class="post-head">
-            <div class="post-avatar" style="background-image:url('https://images.unsplash.com/photo-1517841905240-472988babdf9?w=200&q=80')"></div>
+            <div class="post-avatar ava-grad-3"></div>
             <div class="post-info">
               <div class="post-name">Mistress E.</div>
               <div class="post-time">5 hours ago</div>
             </div>
           </div>
           <div class="post-text">You exist to serve. Prove it. ♛</div>
-          <div class="post-img" style="background-image:url('https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=800&q=80')"></div>
+          <div class="post-img figure img-3"></div>
           <div class="post-actions">
             <span class="a">❤️ 412</span>
             <span class="a">💬 67</span>
@@ -893,7 +933,7 @@
         <!-- POST 3 -->
         <article class="post">
           <div class="post-head">
-            <div class="post-avatar" style="background-image:url('https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=200&q=80')"></div>
+            <div class="post-avatar ava-grad-2"></div>
             <div class="post-info">
               <div class="post-name">Goddess A.</div>
               <div class="post-time">8 hours ago</div>
@@ -909,11 +949,11 @@
           <div class="crown">♛</div>
           <h3>FINDOMINIA</h3>
           <div class="mini-avatars">
-            <div class="mini-avatar" style="background-image:url('https://i.pravatar.cc/80?img=1')"></div>
-            <div class="mini-avatar" style="background-image:url('https://i.pravatar.cc/80?img=5')"></div>
-            <div class="mini-avatar" style="background-image:url('https://i.pravatar.cc/80?img=9')"></div>
-            <div class="mini-avatar" style="background-image:url('https://i.pravatar.cc/80?img=20')"></div>
-            <div class="mini-avatar" style="background-image:url('https://i.pravatar.cc/80?img=25')"></div>
+            <div class="mini-avatar ava-grad-1"></div>
+            <div class="mini-avatar ava-grad-2"></div>
+            <div class="mini-avatar ava-grad-3"></div>
+            <div class="mini-avatar ava-grad-4"></div>
+            <div class="mini-avatar ava-grad-5"></div>
           </div>
         </div>
 
@@ -926,20 +966,20 @@
           </div>
 
           <div class="mini-post">
-            <div class="mini-post-avatar" style="background-image:url('https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?w=120&q=80')"></div>
+            <div class="mini-post-avatar ava-grad-1"></div>
             <div class="mini-post-body">
               <div class="mini-post-name">Queen Mei.</div>
               <div class="mini-post-text">A tribute well sent is a pleasure well earned. Remember who holds the power.</div>
-              <div class="mini-post-img" style="background-image:url('https://images.unsplash.com/photo-1551803091-e20673f15770?w=400&q=80')"></div>
+              <div class="mini-post-img figure img-5"></div>
             </div>
           </div>
 
           <div class="mini-post">
-            <div class="mini-post-avatar" style="background-image:url('https://images.unsplash.com/photo-1517841905240-472988babdf9?w=120&q=80')"></div>
+            <div class="mini-post-avatar ava-grad-3"></div>
             <div class="mini-post-body">
               <div class="mini-post-name">Mistress E.</div>
               <div class="mini-post-text">You exist to serve. Prove it tonight.</div>
-              <div class="mini-post-img" style="background-image:url('https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=400&q=80')"></div>
+              <div class="mini-post-img figure img-3"></div>
             </div>
           </div>
         </div>
