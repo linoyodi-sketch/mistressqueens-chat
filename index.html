@@ -54,7 +54,6 @@
     box-shadow: 0 30px 80px rgba(0,0,0,0.7);
     display: grid;
     grid-template-columns: 260px 1fr;
-    min-height: 720px;
   }
 
   /* ============== LEFT SIDEBAR ============== */
@@ -316,16 +315,9 @@
 
   /* FEED */
   .feed {
-    padding: 18px 24px 24px;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    overflow-y: auto;
-    max-height: calc(720px - 220px);
+    padding: 18px 24px 28px;
   }
-  .feed::-webkit-scrollbar { width: 8px; }
-  .feed::-webkit-scrollbar-track { background: transparent; }
-  .feed::-webkit-scrollbar-thumb { background: var(--border-2); border-radius: 4px; }
+  .feed > .post + .post { margin-top: 16px; }
 
   .post {
     background: var(--bg-card);
